@@ -1,14 +1,14 @@
-//create variables for current day and time
+//The "HH" after format signifies military time compare to h for regular time.
 var currentTime = parseInt(moment().format("HH"));
 var button = document.querySelector(".savebtn");
 
 var timeEl = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
 
-//use moment.js to figure out how to create the date at the top of the planner
+//Used momentjs to have the date at the top of the planner populate with the current date
 var currentDay = moment().format("MMMM Do YYYY");
 $("#currentDay").text(currentDay);
-//business hours are alreeady presented but you have to make the hour blocks populate all throughtout the calendar 9-5
-//create if statements for the change of hours
+
+//if/else if statements created to change the color of the time blocks according to the current time. 
 var descriptionArray = $(".description");
 for (var i = 0; i < descriptionArray.length; i++) {
   var id = parseInt(descriptionArray[i].getAttribute("id"));
@@ -21,9 +21,7 @@ for (var i = 0; i < descriptionArray.length; i++) {
   }
 }
 
-//figure out how to create the look for the color block change
-//make the time blocks coordinate with the time of the day... gray=past, green=future, red=present
-//make save button active
+//js below was used to make the saved buttons work
 $(".saveBtn").on("click", function () {
   var btnId = $(this).attr("id");
   var id = btnId.replace("btn", "");
@@ -42,10 +40,11 @@ var task15 = localStorage.getItem("15");
 var task16 = localStorage.getItem("16");
 var task17 = localStorage.getItem("17");
 $("#9").val(task9); 
-$("#9").val(task10); 
-$("#9").val(task10); 
-$("#9").val(task11); 
-$("#9").val(task12); 
-$("#9").val(task13); 
-$("#9").val(task14); 
-$("#9").val(task15); 
+$("#10").val(task10); 
+$("#11").val(task10); 
+$("#12").val(task11); 
+$("#13").val(task12); 
+$("#14").val(task13); 
+$("#15").val(task14); 
+$("#16").val(task15); 
+$("#17").val(task15); 
