@@ -3,3 +3,8 @@ This is a daily planner with standard business hours (9am - 5pm). This template 
 
 Description
 
+![screen shot](DailySchedule.png)
+
+
+Deployed URL: https://claudialhc.github.io/work-day-scheduler/
+
