@@ -8,7 +8,7 @@ var currentDay = moment().format("MMMM Do YYYY");
 $("#currentDay").text(currentDay);
 ``` 
 
-The 
+The (see formula below)
 ```js 
 moment().format("MMM Do YYYY")
 ```
